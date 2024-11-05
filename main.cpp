@@ -30,8 +30,7 @@ void fixedUpdate() {Part food = spawnFood();
 int main() {snakeInit();
     std::thread loop(fixedUpdate);
     system("stty raw"); 
-    while (true) {
-        char c = std::getchar();
+    while (true) {char c = std::getchar();
         if(c == 'q'){system("stty cooked");
             return 0;}
         else facing = (c == 'w')? 4 : (c == 's')? 3 : (c == 'a')? 1 : (c == 'd')? 2 : facing;}
